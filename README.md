@@ -1,2 +1,2 @@
 # happyprime.co
-The theme powering happyprime.co
+The WordPress theme powering happyprime.co
