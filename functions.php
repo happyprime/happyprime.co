@@ -229,25 +229,25 @@ function happyprime_fonts_url() {
 	$fonts_url = '';
 
 	/**
-	 * Translator: If Roboto Sans does not support characters in your language, translate this to 'off'.
+	 * Translator: If Raleway does not support characters in your language, translate this to 'off'.
 	 */
-	$roboto = esc_html_x( 'on', 'Roboto Condensed font: on or off', 'happyprime' );
+	$raleway = esc_html_x( 'on', 'Raleway: on or off', 'happyprime' );
 	/**
-	 * Translator: If Crimson Text does not support characters in your language, translate this to 'off'.
+	 * Translator: If Source Sans does not support characters in your language, translate this to 'off'.
 	 */
-	$crimson_text = esc_html_x( 'on', 'Crimson Text font: on or off', 'happyprime' );
+	$source_sans = esc_html_x( 'on', 'Source Sans: on or off', 'happyprime' );
 
 	$font_families = array();
 
-	if ( 'off' !== $roboto ) {
-		$font_families[] = 'Roboto Condensed:400,400i,700,700i';
+	if ( 'off' !== $raleway ) {
+		$font_families[] = 'Raleway:300,300i,900,900i';
 	}
 
-	if ( 'off' !== $crimson_text ) {
-		$font_families[] = 'Crimson Text:400,400i,600,600i';
+	if ( 'off' !== $source_sans ) {
+		$font_families[] = 'Source Sans:400,400i,700,700i';
 	}
 
-	if ( in_array( 'on', array( $roboto, $crimson_text ) ) ) {
+	if ( in_array( 'on', array( $raleway, $source_sans ) ) ) {
 		$query_args = array(
 			'family' => urlencode( implode( '|', $font_families ) ),
 			'subset' => urlencode( 'latin,latin-ext' ),

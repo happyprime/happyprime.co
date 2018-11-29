@@ -3,8 +3,8 @@
  * Ensures a visual match between back- and front-end.
  */
  body.gutenberg-editor-page .editor-writing-flow {
-	color: #333;
-	font-family: 'Crimson Text', serif;
+	color: #3f3f3f;
+	font-family: 'Source Sans', sans-serif;
 	font-size: calc(20 / 16)rem;
 	line-height: 1.4;
 }
@@ -17,7 +17,7 @@ body.gutenberg-editor-page .editor-writing-flow h4,
 body.gutenberg-editor-page .editor-writing-flow h5,
 body.gutenberg-editor-page .editor-writing-flow h6,
 body.gutenberg-editor-page .edit-post-visual-editor p {
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Raleway', sans-serif;
 	color: #32373c;
 	clear: both;
 }
@@ -28,15 +28,15 @@ body.gutenberg-editor-page .editor-post-title .editor-post-title__input {
 }
 
 body.gutenberg-editor-page .edit-post-visual-editor p {
-	font-family: 'Crimson Text', serif;
+	font-family: 'Source Sans', sans-serif;
 	font-size: calc(20 / 16)rem;
 
 }
 
 body.gutenberg-editor-page .wp-block-cover-image .wp-block-cover-image-text,
 body.gutenberg-editor-page .wp-block-cover-image .wp-block-cover-image h2 {
-    color: #fff;
-    font-size: 2em;
+	color: #fff;
+	font-size: 2em;
 	line-height: 1.25;
 }
 

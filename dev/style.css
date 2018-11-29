@@ -741,7 +741,6 @@ textarea {
 
 .site-title {
 	margin: 0 1em;
-	font-family: var(--highlight-font-family);
 	font-size: 38px;
 	font-weight: bold;
 	line-height: 1.2;
@@ -755,7 +754,6 @@ textarea {
 
 .site-description {
 	margin: .4375em 0 0;
-	font-family: var(--highlight-font-family);
 	font-size: 17px;
 	font-weight: inherit;
 	line-height: 1.4;
@@ -772,14 +770,12 @@ textarea {
 	margin: 0 auto 2em;
 	padding: 0 1em;
 	max-width: var(--content-width)rem;
-	font-family: var(--highlight-font-family);
 }
 
 .menu-toggle {
 	display: block;
 	margin: 1.2em auto;
 	padding: .6em 1.2em .5em;
-	font-family: var(--highlight-font-family);
 	font-size: 80%;
 	text-transform: uppercase;
 	border: 2px solid black;
@@ -958,7 +954,6 @@ textarea {
 	max-width: 720px;
 	overflow: hidden;
 	padding-bottom: 2em;
-	font-family: var(--highlight-font-family);
 }
 
 .nav-links {
@@ -991,7 +986,6 @@ textarea {
 .site-footer {
 	margin: 1em 0 0;
 	padding: 2em 0;
-	font-family: var(--highlight-font-family);
 }
 
 .site-info {
