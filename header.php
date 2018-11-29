@@ -34,7 +34,7 @@
 				</figure>
 			<?php endif; ?>
 			<div class="site-branding">
-				<?php the_custom_logo(); ?>
+				<?php get_template_part( 'dev/images/inline', 'happy-prime-logo.svg' ); ?>
 				<?php if ( is_front_page() && is_home() ) : ?>
 					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 				<?php else : ?>
