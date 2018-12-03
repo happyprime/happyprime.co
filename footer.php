@@ -19,11 +19,6 @@
 			printf( esc_html__( 'Proudly powered by %s', 'happyprime' ), 'WordPress' );
 			?>
 		</a>
-		<span class="sep"> | </span>
-		<?php
-			/* translators: 1: Theme name, 2: Theme author. */
-			printf( esc_html__( 'Theme: %1$s by %2$s.', 'happyprime' ), '<a href="' . esc_url( 'https://github.com/happyprime/happyprime/' ) . '">Happy Prime Theme</a>', 'the contributors' );
-		?>
 	</div><!-- .site-info -->
 </footer><!-- #colophon -->
 </div><!-- #page -->

@@ -471,6 +471,11 @@ template {
 	}
 }
 
+/* --- home specific --- */
+.home .entry-header {
+	display: none;
+}
+
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
@@ -482,14 +487,26 @@ optgroup,
 textarea {
 	color: #3f3f3f;
 	font-family: 'Source Sans', sans-serif;
-	font-size: calc(20 / 16)rem;
-	line-height: 1.4;
+	font-size: calc(18 / 16)rem;
+	line-height: 1.65;
 }
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Raleway', sans-serif;
 	color: #32373c;
 	clear: both;
+}
+
+h2 {
+	font-size: 2em;
+}
+
+h3 {
+	font-size: 1.5em;
+	font-weight: 300;
+	letter-spacing: .05em;
+	margin: 2em 0 .75em;
+	text-transform: uppercase;
 }
 
 .entry-header h1.entry-title {
@@ -539,6 +556,10 @@ mark, ins {
 
 big {
 	font-size: 125%;
+}
+
+::selection {
+	background-color: #f9e000;
 }
 
 /*--------------------------------------------------------------
@@ -729,6 +750,10 @@ textarea {
 	padding-bottom: 1em;
 }
 
+.home .site-header {
+	padding-bottom: 0;
+}
+
 .header-image {
 	margin: 0 auto;
 }
@@ -744,8 +769,30 @@ textarea {
 }
 
 .site-branding {
+	background: #f9e000;
 	text-align: center;
-	padding: 60px 0 1.75em;
+	padding: 5em 0;
+	height: 50vh;
+}
+
+.solo-word-mark {
+	position: absolute;
+	bottom: 2rem;
+	left: calc(50% - 85px);
+	width: 170px;
+}
+
+.solo-logo-mark {
+	height: 100%;
+	max-width: 85%;
+}
+
+.logo-icon {
+	fill: #3f3f3f;
+}
+
+.logo-word-mark {
+	fill: #3f3f3f;
 }
 
 .site-title {
@@ -775,14 +822,14 @@ textarea {
 --------------------------------------------------------------*/
 .main-navigation {
 	clear: both;
-	display: block;
+	display: none;
 	margin: 0 auto 2em;
 	padding: 0 1em;
 	max-width: 45rem;
 }
 
 .menu-toggle {
-	display: block;
+	display: none;
 	margin: 1.2em auto;
 	padding: .6em 1.2em .5em;
 	font-size: 80%;
@@ -1032,4 +1079,36 @@ textarea {
 /* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
 .infinity-end.neverending .site-footer {
 	display: block;
+}
+
+/*--------------------------------------------------------------
+# Utilities
+--------------------------------------------------------------*/
+
+.u-impact {
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	font-size: 2.5em;
+	line-height: 1.1;
+	margin: 0;
+	padding-bottom: 1.75em;
+}
+
+.u-height-50 {
+	min-height: 50vh;
+}
+
+.u-section-divider {
+	background: none;
+	border-bottom: 1px solid #f9e000;
+	margin: 6rem 0;
+	max-width: 400px;
+}
+
+.u-section-intro {
+	font-size: 1.25em;
 }

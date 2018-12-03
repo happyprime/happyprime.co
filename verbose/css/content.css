@@ -44,6 +44,10 @@
 	margin: 1.5em 0 0;
 }
 
+.home .entry-content {
+	margin-top: 0;
+}
+
 .page-content > *,
 .entry-content > *,
 .entry-summary > *,
@@ -96,7 +100,7 @@
 .entry-footer {
 	clear: both;
 	padding: 1.5em 1.5rem 3em;
-	border-bottom: 1px solid #111;
+	border-bottom: 1px solid #f9e000;
 }
 
 @media screen and (min-width: 48em) {
@@ -340,19 +344,19 @@
 --------------------------------------------------------------*/
 
 .has-small-font-size {
-	font-size: calc(16 / 16)rem;
+	font-size: calc(14 / 16)rem;
 }
 
 .has-regular-font-size {
-	font-size: calc(20 / 16)rem;
+	font-size: calc(18 / 16)rem;
 }
 
 .has-large-font-size {
-	font-size: calc(36 / 16)rem;
+	font-size: calc(24 / 16)rem;
 }
 
 .has-larger-font-size {
-	font-size: calc(48 / 16)rem;
+	font-size: calc(40 / 16)rem;
 }
 
 /*--------------------------------------------------------------

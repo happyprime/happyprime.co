@@ -5,8 +5,8 @@
  body.gutenberg-editor-page .editor-writing-flow {
 	color: #3f3f3f;
 	font-family: 'Source Sans', sans-serif;
-	font-size: calc(20 / 16)rem;
-	line-height: 1.4;
+	font-size: calc(18 / 16)rem;
+	line-height: 1.65;
 }
 
 body.gutenberg-editor-page .editor-post-title .editor-post-title__input,
@@ -29,7 +29,7 @@ body.gutenberg-editor-page .editor-post-title .editor-post-title__input {
 
 body.gutenberg-editor-page .edit-post-visual-editor p {
 	font-family: 'Source Sans', sans-serif;
-	font-size: calc(20 / 16)rem;
+	font-size: calc(18 / 16)rem;
 
 }
 
@@ -138,17 +138,17 @@ body.gutenberg-editor-page .wp-block-cover-image .wp-block-cover-image h2 {
 /* Visualize editor font sizes (defined in functions.php). */
 
 .has-small-font-size {
-	font-size: calc(16 / 16)rem;
+	font-size: calc(14 / 16)rem;
 }
 
 .has-regular-font-size {
-	font-size: calc(20 / 16)rem;
+	font-size: calc(18 / 16)rem;
 }
 
 .has-large-font-size {
-	font-size: calc(36 / 16)rem;
+	font-size: calc(24 / 16)rem;
 }
 
 .has-larger-font-size {
-	font-size: calc(48 / 16)rem;
+	font-size: calc(40 / 16)rem;
 }

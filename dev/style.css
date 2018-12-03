@@ -464,6 +464,11 @@ template {
 	}
 }
 
+/* --- home specific --- */
+.home .entry-header {
+	display: none;
+}
+
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
@@ -483,6 +488,18 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: var(--highlight-font-family);
 	color: #32373c;
 	clear: both;
+}
+
+h2 {
+	font-size: 2em;
+}
+
+h3 {
+	font-size: 1.5em;
+	font-weight: 300;
+	letter-spacing: .05em;
+	margin: 2em 0 .75em;
+	text-transform: uppercase;
 }
 
 .entry-header h1.entry-title {
@@ -532,6 +549,10 @@ mark, ins {
 
 big {
 	font-size: 125%;
+}
+
+::selection {
+	background-color: var(--c-hp-yellow);
 }
 
 /*--------------------------------------------------------------
@@ -720,6 +741,10 @@ textarea {
 	padding-bottom: 1em;
 }
 
+.home .site-header {
+	padding-bottom: 0;
+}
+
 .header-image {
 	margin: 0 auto;
 }
@@ -735,8 +760,30 @@ textarea {
 }
 
 .site-branding {
+	background: var(--c-hp-yellow);
 	text-align: center;
-	padding: 60px 0 1.75em;
+	padding: 5em 0;
+	height: 50vh;
+}
+
+.solo-word-mark {
+	position: absolute;
+	bottom: 2rem;
+	left: calc(50% - 85px);
+	width: 170px;
+}
+
+.solo-logo-mark {
+	height: 100%;
+	max-width: 85%;
+}
+
+.logo-icon {
+	fill: var(--c-primary);
+}
+
+.logo-word-mark {
+	fill: var(--c-primary);
 }
 
 .site-title {
@@ -766,14 +813,14 @@ textarea {
 --------------------------------------------------------------*/
 .main-navigation {
 	clear: both;
-	display: block;
+	display: none;
 	margin: 0 auto 2em;
 	padding: 0 1em;
 	max-width: var(--content-width)rem;
 }
 
 .menu-toggle {
-	display: block;
+	display: none;
 	margin: 1.2em auto;
 	padding: .6em 1.2em .5em;
 	font-size: 80%;
@@ -1005,4 +1052,32 @@ textarea {
 /* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
 .infinity-end.neverending .site-footer {
 	display: block;
+}
+
+/*--------------------------------------------------------------
+# Utilities
+--------------------------------------------------------------*/
+
+.u-impact {
+	align-items: center;
+	display: flex;
+	font-size: 2.5em;
+	line-height: 1.1;
+	margin: 0;
+	padding-bottom: 1.75em;
+}
+
+.u-height-50 {
+	min-height: 50vh;
+}
+
+.u-section-divider {
+	background: none;
+	border-bottom: 1px solid var(--c-hp-yellow);
+	margin: 6rem 0;
+	max-width: 400px;
+}
+
+.u-section-intro {
+	font-size: 1.25em;
 }
