@@ -1067,6 +1067,13 @@ textarea {
 	padding-bottom: 1.75em;
 }
 
+@media (--narrow-menu-query) {
+	.u-impact {
+		font-size: 2em;
+		padding-bottom: 3em;
+	}
+}
+
 .u-height-50 {
 	min-height: 50vh;
 }
