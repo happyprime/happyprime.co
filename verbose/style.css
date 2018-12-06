@@ -770,15 +770,39 @@ textarea {
 
 .site-branding {
 	background: #f9e000;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
 	text-align: center;
+	padding: 3.5vh 0;
+	height: 20vh;
+}
+
+.home .site-branding {
 	padding: 12vh 0;
 	height: 50vh;
 }
 
+.header-mark-wrap {
+	width: 100%;
+}
+
+.word-mark-wrap {
+	background: #fff;
+	border-top: 1px solid rgba(0, 0, 0, .05);
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	padding: .75em 0;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}
+
 .solo-word-mark {
-	position: absolute;
-	bottom: 2rem;
-	left: calc(50% - 85px);
 	width: 170px;
 }
 
@@ -1059,7 +1083,7 @@ textarea {
 --------------------------------------------------------------*/
 .site-footer {
 	margin: 1em 0 0;
-	padding: 2em 0;
+	padding: 4em 0;
 }
 
 .site-info {

@@ -34,8 +34,16 @@
 				</figure>
 			<?php endif; ?>
 			<div class="site-branding">
-                <?php get_template_part( 'images/inline', 'happy-prime-word-mark.svg' ); ?>
-				<?php get_template_part( 'images/inline', 'happy-prime-logo-mark.svg' ); ?>
+				<div class="header-mark-wrap">
+					<a href="/">
+						<?php get_template_part( 'images/inline', 'happy-prime-logo-mark.svg' ); ?>
+					</a>
+				</div>
+				<div class="word-mark-wrap">
+					<a href="/">
+						<?php get_template_part( 'images/inline', 'happy-prime-word-mark.svg' ); ?>
+					</a>
+				</div>
 				<?php if ( is_front_page() && is_home() ) : ?>
 					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 				<?php else : ?>
