@@ -51,7 +51,8 @@
 .page-content > *,
 .entry-content > *,
 .entry-summary > *,
-.not-found > * {
+.not-found > *,
+div.wpcf7 {
 	margin-right: auto;
 	margin-left: auto;
 	padding-right: 1.5rem;
@@ -72,6 +73,10 @@
 	max-width: var(--content-width)rem;
 }
 
+input {
+	width: 100%;
+}
+
 @media (--content-query) {
 	.page-content > *,
 	.entry-content > *,
@@ -82,9 +87,14 @@
 	.site-info,
 	.post-navigation,
 	.page-navigation,
-	.comments-area {
+	.comments-area,
+	div.wpcf7 {
 		padding-left: 0px;
 		padding-right: 0px;
+	}
+
+	input {
+		width: auto;
 	}
 }
 
