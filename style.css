@@ -90,9 +90,13 @@ Tags: translation-ready
 }
 
 .bg-yellow .wp-block-column {
+	display: -webkit-box;
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	        flex-direction: column;
+	-webkit-box-pack: center;
+	        justify-content: center;
 	margin-bottom: 0;
 	margin-right: auto;
 	padding: 3rem;
@@ -146,6 +150,7 @@ Tags: translation-ready
 	border-color: #3f403f;
 	color: #ffda00;
 	text-decoration: none;
+	-webkit-transition: all .3s ease;
 	transition: all .3s ease;
 }
 
@@ -161,7 +166,8 @@ Tags: translation-ready
 }
 
 .wp-block-latest-posts.is-grid {
-	justify-content: center;
+	-webkit-box-pack: center;
+	        justify-content: center;
 }
 
 .wp-block-latest-posts li > a {
@@ -170,7 +176,8 @@ Tags: translation-ready
 }
 
 .wp-block-latest-posts.columns-3 li {
-	flex: 1;
+	-webkit-box-flex: 1;
+	        flex: 1;
 	width: 100%;
 	max-width: 500px;
 
@@ -189,7 +196,8 @@ div.wpcf7 {
 
 /* Footer */
 .footer-credits {
-	justify-content: center;
+	-webkit-box-pack: center;
+	        justify-content: center;
 }
 
 .theme-credits {
@@ -215,7 +223,8 @@ div.wpcf7 {
 }
 
 .post-meta {
-	justify-content: center;
+	-webkit-box-pack: center;
+	        justify-content: center;
 	margin-top: 5rem;
 }
 
@@ -274,7 +283,8 @@ li.post-author {
 
 .archive .post-meta,
 .blog .post-meta {
-	justify-content: flex-start;
+	-webkit-box-pack: start;
+	        justify-content: flex-start;
 	margin: 0;
 }
 
@@ -323,6 +333,7 @@ input[type="reset"],
 input[type="submit"] {
 	background: #3f403f;
 	border-radius: 50px;
+	-webkit-transition: all .3s ease;
 	transition: all .3s ease;
 }
 
