@@ -43,6 +43,7 @@ Tags: translation-ready
 }
 
 .entry-content > .alignfull {
+	margin-left: 0;
 	max-width: 100%;
 }
 
@@ -51,7 +52,7 @@ Tags: translation-ready
 }
 
 #site-header {
-	border-bottom: 1px solid rgba(0,0,0,.05);
+	border-bottom: 1px solid rgba(0, 0, 0, .05);
 	margin-bottom: 0;
 	padding-left: 3rem;
 	padding-right: 3rem;
@@ -63,6 +64,7 @@ Tags: translation-ready
 }
 
 @media screen and (min-width: 1000px) {
+
 	#site-header,
 	.header-inner.is-sticky {
 		padding-right: 6rem;
@@ -106,6 +108,7 @@ Tags: translation-ready
 }
 
 @media screen and (max-width: 1000px) {
+
 	.bg-yellow .wp-block-column:first-of-type,
 	.bg-yellow .wp-block-column {
 		flex-basis: 100%;
@@ -115,7 +118,7 @@ Tags: translation-ready
 }
 
 .hero-text {
-	color: #3F403F;
+	color: #3f403f;
 	font-size: 7rem;
 	font-weight: 900;
 	line-height: 1.15;
@@ -135,19 +138,20 @@ Tags: translation-ready
 
 .is-style-outline .wp-block-button__link {
 	border-radius: 100px;
-	color: #3F403F;
+	color: #3f403f;
 	font-weight: 300;
 }
 
 .is-style-outline .wp-block-button__link:hover {
-	background: #3F403F;
-	border-color: #3F403F;
+	background: #3f403f;
+	border-color: #3f403f;
 	color: #ffda00;
 	text-decoration: none;
 	transition: all .3s ease;
 }
 
 @media screen and (max-width: 800px) {
+
 	.hero-text {
 		font-size: 3.5rem;
 	}
@@ -162,7 +166,7 @@ Tags: translation-ready
 }
 
 .wp-block-latest-posts li > a {
-	color: #3F403F;
+	color: #3f403f;
 	font-weight: 900;
 }
 
@@ -182,6 +186,10 @@ Tags: translation-ready
 div.wpcf7 {
 	margin-left: auto;
 	margin-right: auto;
+}
+
+.entry-content form p {
+	padding: 0;
 }
 
 /* Footer */
@@ -222,7 +230,7 @@ div.wpcf7 {
 
 .post-meta,
 .post-meta a {
-	color: #3F403F;
+	color: #3f403f;
 	font-weight: 400;
 }
 
@@ -263,6 +271,7 @@ li.post-author {
 }
 
 @media screen and (min-width: 800px) {
+
 	.archive-title {
 		font-size: 6rem;
 	}
@@ -290,7 +299,8 @@ li.post-author {
 }
 
 /* Navigation */
-.main-menu > li > a, .main-menu > li > .ancestor-wrapper > a {
+.main-menu > li > a,
+.main-menu > li > .ancestor-wrapper > a {
 	padding-right: 3rem;
 	padding-left: 3rem;
 }
@@ -308,8 +318,15 @@ h3 {
 }
 
 /* General buttons */
-button, .button, .faux-button, .wp-block-button__link, .wp-block-file__button, input[type="button"], input[type="reset"], input[type="submit"] {
-	background: #3F403F;
+button,
+.button,
+.faux-button,
+.wp-block-button__link,
+.wp-block-file__button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	background: #3f403f;
 	border-radius: 50px;
 	transition: all .3s ease;
 }
@@ -323,6 +340,10 @@ input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
 	background: #ffda00;
-	color: #3F403F;
+	color: #3f403f;
 	text-decoration: none;
+}
+
+.post-navigation .nav-links {
+	padding: 0 3rem;
 }

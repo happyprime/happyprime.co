@@ -1,3 +1,6 @@
-happyprime
+# Ignore directories created by tooling.
 vendor
 node_modules
+
+# Ignore root stylesheet, which is built during deployment.
+/style.css
