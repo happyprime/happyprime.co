@@ -43,6 +43,7 @@ Tags: translation-ready
 }
 
 .entry-content > .alignfull {
+	margin-left: 0;
 	max-width: 100%;
 }
 
@@ -185,6 +186,10 @@ Tags: translation-ready
 div.wpcf7 {
 	margin-left: auto;
 	margin-right: auto;
+}
+
+.entry-content form p {
+	padding: 0;
 }
 
 /* Footer */
@@ -337,4 +342,8 @@ input[type="submit"]:hover {
 	background: #ffda00;
 	color: #3f403f;
 	text-decoration: none;
+}
+
+.post-navigation .nav-links {
+	padding: 0 3rem;
 }
