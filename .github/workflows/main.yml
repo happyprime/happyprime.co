@@ -33,4 +33,8 @@ jobs:
       uses: rtCamp/action-slack-notify@v2.0.0
       env:
         SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+        SLACK_ICON: https://github.com/happyprime.png
         SLACK_CHANNE: river-deploys
+        SLACK_USERNAME: Happy Prime
+        SLACK_TITLE: Happy Prime theme deployment
+        SLACK_MESSAGE: 'The theme for happyprime.co has been deployed :rocket:'
