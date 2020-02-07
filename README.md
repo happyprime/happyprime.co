@@ -11,6 +11,6 @@
 
 Deployment happens for every merge into the `master` branch.
 
-Deployment runs `npm install` and `npm run bundle`, which builds a `happyprime` directory inside the theme with only the necessary files for production.
+Deployment runs `npm install` and `npm run build-css`, which creates the theme's `style.css` from the files in the `css/` directory. It then syncs the theme files with the server.
 
 Deployment notifications are sent to Slack.
