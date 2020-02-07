@@ -4,7 +4,8 @@
 
 * `git clone`
 * `npm install`
-* `npm run build`
+* `npm run fix-css` to run stylelint on styles in the `css/` directory.
+* `npm run build-css` to build the main `style.css` file for the theme.
 
 ## Deployment
 
