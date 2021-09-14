@@ -188,6 +188,16 @@ Tags: translation-ready
 	padding: 2rem 3rem;
 }
 
+/* Code Block */
+.wp-block-code {
+	font-size: 15px;
+}
+
+@media screen and (min-width: 1000px) {
+	.wp-block-code {
+		max-width: 1000px;
+	}
+}
 
 /* Form */
 div.wpcf7 {
