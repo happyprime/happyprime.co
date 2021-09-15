@@ -4,14 +4,21 @@
 	"description": "A WordPress theme.",
 	"dependencies": {},
 	"devDependencies": {
-		"css-loader": "^3.4.2",
-		"postcss-cli": "^7.1.0",
+		"@wordpress/scripts": "^18.0.1",
+		"autoprefixer": "^10.3.1",
+		"postcss": "^8.3.6",
+		"postcss-cli": "^8.3.1",
+		"postcss-custom-media": "^8.0.0",
+		"postcss-import": "^14.0.2",
+		"postcss-generate-asset-php": "^0.0.1",
 		"precss": "^4.0.0",
-		"stylelint": "^13.0.0"
+		"stylelint": "^13.13.1",
+		"stylelint-config-wordpress": "^17.0.0"
 	},
 	"scripts": {
-		"fix-css": "stylelint --fix css/*.css",
-		"build-css": "postcss css/*.css -o style.css"
+		"build": "npm run stylelint & npm run postcss:main",
+		"postcss:main": "postcss -o style.css css/style.css",
+		"stylelint": "stylelint css/*.css"
 	},
 	"repository": {
 		"type": "git",
