@@ -194,9 +194,11 @@ Tags: translation-ready
 }
 
 @media screen and (min-width: 1000px) {
+
 	.wp-block-code {
 		max-width: 1000px;
 	}
+
 }
 
 /* Form */
