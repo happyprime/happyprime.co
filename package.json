@@ -16,7 +16,7 @@
 		"stylelint-config-wordpress": "^17.0.0"
 	},
 	"scripts": {
-		"build": "npm run stylelint & npm run postcss:main",
+		"build-css": "npm run stylelint & npm run postcss:main",
 		"postcss:main": "postcss -o style.css css/style.css",
 		"stylelint": "stylelint css/*.css"
 	},
