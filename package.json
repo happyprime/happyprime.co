@@ -4,7 +4,7 @@
 	"description": "A WordPress theme.",
 	"dependencies": {},
 	"devDependencies": {
-		"@wordpress/scripts": "^18.0.1",
+		"@wordpress/scripts": "^26.16.0",
 		"autoprefixer": "^10.3.1",
 		"postcss": "^8.3.6",
 		"postcss-cli": "^8.3.1",
