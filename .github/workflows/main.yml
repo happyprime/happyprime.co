@@ -22,7 +22,7 @@ jobs:
       run: npm run build-css
     - name: Deploy to happyprime.co
       if: success()
-      uses: easingthemes/ssh-deploy@v4.1.10
+      uses: easingthemes/ssh-deploy@v5.0.0
       env:
           SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
           ARGS: "-rltgoDzvO --exclude=.git --exclude=.gitignore --exclude=.github --exclude=node_modules --delete"
