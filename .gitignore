@@ -2,6 +2,10 @@
 vendor
 node_modules
 
+db.php
+
 plugins
 themes/*
 !themes/happyprime
+uploads/
+upgrades/
