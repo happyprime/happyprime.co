@@ -10,6 +10,9 @@
 	<exclude-pattern>node_modules/</exclude-pattern>
 	<exclude-pattern>vendor/</exclude-pattern>
 
+	<exclude-pattern>db.php</exclude-pattern>
+	<exclude-pattern>*.svg.php</exclude-pattern>
+
 	<!-- Exclude all plugins, except for those prefixed as happyprime. -->
 	<exclude-pattern type="relative">^plugins/(?!happyprime-*)</exclude-pattern>
 
