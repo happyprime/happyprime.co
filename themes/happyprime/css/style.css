@@ -1,0 +1,368 @@
+/*!
+Theme Name: Happy Prime Theme
+Theme URI: https://github.com/happyprime/happyprime.co/
+Author: Happy Prime
+Author URI: https://happyprime.co
+Template: chaplin
+Description: A theme for happyprime.co
+Version: 2.0.2
+License: GNU General Public License v3 or later
+License URI: LICENSE
+Text Domain: happyprime
+Tags: translation-ready
+*/
+
+.site-title a {
+	background-image: url(https://happyprime.co/wp-content/uploads/2019/07/happy-prime-logo.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	display: block;
+	height: 6rem;
+	text-indent: -999999px;
+	width: 300px;
+}
+
+.section-inner {
+	margin: 0;
+	width: 100%;
+	max-width: 100%;
+}
+
+.entry-content {
+	max-width: 100%;
+}
+
+.entry-content > *,
+.entry-content p,
+.comments-wrapper {
+	max-width: 660px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-right: 3rem;
+	padding-left: 3rem;
+}
+
+.entry-content > .alignfull {
+	margin-left: 0;
+	max-width: 100%;
+}
+
+.entry-content > .alignwide {
+	margin: 0 auto;
+	max-width: 900px;
+}
+
+#site-header {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+	margin-bottom: 0;
+	padding-left: 3rem;
+	padding-right: 3rem;
+}
+
+.header-inner.is-sticky {
+	padding-left: 3rem;
+	padding-right: 3rem;
+}
+
+@media screen and (min-width: 1000px) {
+
+	#site-header,
+	.header-inner.is-sticky {
+		padding-right: 6rem;
+		padding-left: 6rem;
+	}
+}
+
+.post-inner {
+	padding-top: 0;
+}
+
+/* Home */
+.home .faux-heading {
+	display: none;
+}
+
+.home .entry-header {
+	margin: 0;
+}
+
+.bg-yellow {
+	background-color: #ffda00;
+	padding: 3rem;
+}
+
+.bg-yellow .wp-block-column {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-bottom: 0;
+	margin-right: auto;
+	padding: 3rem;
+	max-width: 500px;
+}
+
+.bg-yellow .wp-block-column:first-of-type {
+	flex-basis: 66%;
+	margin-left: auto;
+	margin-right: 0;
+	max-width: 800px;
+}
+
+@media screen and (max-width: 1000px) {
+
+	.bg-yellow .wp-block-column:first-of-type,
+	.bg-yellow .wp-block-column {
+		flex-basis: 100%;
+		margin-right: auto;
+		margin-left: auto;
+	}
+}
+
+.hero-text {
+	color: #3f403f;
+	font-size: 7rem;
+	font-weight: 900;
+	line-height: 1.15;
+	margin-bottom: 0;
+}
+
+.support-hero-text {
+	line-height: 1.5;
+	margin: 2rem 0;
+	max-width: 600px;
+}
+
+.bg-yellow .wp-block-image {
+	padding: 5rem;
+}
+
+.is-style-outline .wp-block-button__link {
+	border-radius: 100px;
+	color: #3f403f;
+	font-weight: 300;
+}
+
+.is-style-outline .wp-block-button__link:hover {
+	background: #3f403f;
+	border-color: #3f403f;
+	color: #ffda00;
+	text-decoration: none;
+	transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 800px) {
+
+	.hero-text {
+		font-size: 3.5rem;
+	}
+
+	.bg-yellow .wp-block-image {
+		padding: 2rem 5rem;
+	}
+}
+
+.wp-block-latest-posts.is-grid {
+	justify-content: center;
+}
+
+@media screen and (max-width: 650px) {
+
+	.wp-block-latest-posts.is-grid {
+		flex-direction: column;
+	}
+}
+
+.wp-block-latest-posts li > a {
+	color: #3f403f;
+	font-weight: 900;
+}
+
+.wp-block-latest-posts.columns-3 li {
+	flex: 1;
+	width: 100%;
+	max-width: 500px;
+
+	border: none;
+	border-left: 3px solid #ffda00;
+	margin: 0;
+	padding: 2rem 3rem;
+}
+
+/* Code Block */
+.wp-block-code {
+	font-size: 15px;
+}
+
+@media screen and (min-width: 1000px) {
+
+	.wp-block-code {
+		max-width: 1000px;
+	}
+
+}
+
+/* Form */
+div.wpcf7 {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.entry-content form p {
+	padding: 0;
+}
+
+/* Footer */
+.footer-credits {
+	justify-content: center;
+}
+
+.theme-credits {
+	display: none;
+}
+
+.footer-copyright {
+	margin: 0;
+	padding: 0 3rem;
+}
+
+/* Single Post */
+.single-post #site-header {
+	background: #ffda00;
+}
+
+.entry-header {
+	max-width: 660px;
+	margin: 12rem auto 10rem;
+	padding-right: 3rem;
+	padding-left: 3rem;
+	text-align: center;
+}
+
+.post-meta {
+	justify-content: center;
+	margin-top: 5rem;
+}
+
+.post-meta li {
+	margin: 0;
+}
+
+.post-meta,
+.post-meta a {
+	color: #3f403f;
+	font-weight: 400;
+}
+
+li.post-author {
+	border: solid #ffda00;
+	border-width: 0 1px;
+	padding: 0 1.5rem;
+	margin: 0 1.5rem;
+}
+
+.post-meta .meta-icon {
+	display: none;
+}
+
+/* Pagination */
+.pagination-single {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 660px;
+}
+
+/* Archive */
+.preview-media {
+	display: none;
+}
+
+.archive main,
+.blog main {
+	max-width: 900px;
+	margin: 10rem auto 4rem;
+	padding: 0 3rem;
+}
+
+.archive-header {
+	margin-bottom: 10rem;
+	padding: 0 3rem;
+	text-align: center;
+}
+
+@media screen and (min-width: 800px) {
+
+	.archive-title {
+		font-size: 6rem;
+	}
+}
+
+.archive .post-meta,
+.blog .post-meta {
+	justify-content: flex-start;
+	margin: 0;
+}
+
+.post-meta-archive .post-meta li {
+	margin: 0;
+}
+
+.archive article,
+.blog article {
+	padding: 0.5rem 3rem 2rem;
+	border-left: 5px solid #ffda00;
+}
+
+/* Page */
+.page h1 {
+	font-size: 6rem;
+}
+
+/* Navigation */
+.main-menu > li > a,
+.main-menu > li > .ancestor-wrapper > a {
+	padding-right: 3rem;
+	padding-left: 3rem;
+}
+
+.main-menu-alt li.current-menu-item a {
+	border-bottom: 5px solid #ffda00;
+	font-weight: 900;
+	text-decoration: none;
+}
+
+/* General typography */
+h3 {
+	font-size: 2.5rem;
+	font-weight: 400;
+}
+
+/* General buttons */
+button,
+.button,
+.faux-button,
+.wp-block-button__link,
+.wp-block-file__button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	background: #3f403f;
+	border-radius: 50px;
+	transition: all 0.3s ease;
+}
+
+button:hover,
+.button:hover,
+.faux-button:hover,
+.wp-block-button__link:hover,
+.wp-block-file__button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+	background: #ffda00;
+	color: #3f403f;
+	text-decoration: none;
+}
+
+.post-navigation .nav-links {
+	padding: 0 3rem;
+}

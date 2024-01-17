@@ -2,5 +2,6 @@
 vendor
 node_modules
 
-# Ignore root stylesheet, which is built during deployment.
-/style.css
+plugins
+themes/*
+!themes/happyprime

@@ -1,8 +1,12 @@
 module.exports = {
-	plugins: [
-	  require('stylelint'),
-	  require('precss'),
-	  require('autoprefixer'),
-	  require('postcss-generate-asset-php')
-	]
-  }
+	plugins: {
+		'postcss-import': {
+			plugins: [ require( 'stylelint' ) ],
+		},
+		'postcss-advanced-variables': {},
+		'postcss-preset-env': {},
+		'postcss-nested': {},
+		autoprefixer: {},
+		'postcss-custom-media': {},
+	},
+};

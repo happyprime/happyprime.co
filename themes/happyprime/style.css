@@ -53,7 +53,7 @@ Tags: translation-ready
 }
 
 #site-header {
-	border-bottom: 1px solid rgba(0, 0, 0, .05);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 	margin-bottom: 0;
 	padding-left: 3rem;
 	padding-right: 3rem;
@@ -78,6 +78,7 @@ Tags: translation-ready
 }
 
 /* Home */
+
 .home .faux-heading {
 	display: none;
 }
@@ -146,8 +147,9 @@ Tags: translation-ready
 	background: #3f403f;
 	border-color: #3f403f;
 	color: #ffda00;
+	-webkit-text-decoration: none;
 	text-decoration: none;
-	transition: all .3s ease;
+	transition: all 0.3s ease;
 }
 
 @media screen and (max-width: 800px) {
@@ -189,6 +191,7 @@ Tags: translation-ready
 }
 
 /* Code Block */
+
 .wp-block-code {
 	font-size: 15px;
 }
@@ -202,6 +205,7 @@ Tags: translation-ready
 }
 
 /* Form */
+
 div.wpcf7 {
 	margin-left: auto;
 	margin-right: auto;
@@ -212,6 +216,7 @@ div.wpcf7 {
 }
 
 /* Footer */
+
 .footer-credits {
 	justify-content: center;
 }
@@ -226,6 +231,7 @@ div.wpcf7 {
 }
 
 /* Single Post */
+
 .single-post #site-header {
 	background: #ffda00;
 }
@@ -265,6 +271,7 @@ li.post-author {
 }
 
 /* Pagination */
+
 .pagination-single {
 	margin-left: auto;
 	margin-right: auto;
@@ -272,6 +279,7 @@ li.post-author {
 }
 
 /* Archive */
+
 .preview-media {
 	display: none;
 }
@@ -308,16 +316,18 @@ li.post-author {
 
 .archive article,
 .blog article {
-	padding: .5rem 3rem 2rem;
+	padding: 0.5rem 3rem 2rem;
 	border-left: 5px solid #ffda00;
 }
 
 /* Page */
+
 .page h1 {
 	font-size: 6rem;
 }
 
 /* Navigation */
+
 .main-menu > li > a,
 .main-menu > li > .ancestor-wrapper > a {
 	padding-right: 3rem;
@@ -327,16 +337,19 @@ li.post-author {
 .main-menu-alt li.current-menu-item a {
 	border-bottom: 5px solid #ffda00;
 	font-weight: 900;
+	-webkit-text-decoration: none;
 	text-decoration: none;
 }
 
 /* General typography */
+
 h3 {
 	font-size: 2.5rem;
 	font-weight: 400;
 }
 
 /* General buttons */
+
 button,
 .button,
 .faux-button,
@@ -347,7 +360,7 @@ input[type="reset"],
 input[type="submit"] {
 	background: #3f403f;
 	border-radius: 50px;
-	transition: all .3s ease;
+	transition: all 0.3s ease;
 }
 
 button:hover,
@@ -360,6 +373,7 @@ input[type="reset"]:hover,
 input[type="submit"]:hover {
 	background: #ffda00;
 	color: #3f403f;
+	-webkit-text-decoration: none;
 	text-decoration: none;
 }
 

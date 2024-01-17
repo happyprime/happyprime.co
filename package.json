@@ -1,33 +1,33 @@
 {
-	"name": "happyprime.co",
+	"name": "happyprime",
 	"version": "1.0.0",
-	"description": "A WordPress theme.",
-	"dependencies": {},
+	"description": "",
 	"devDependencies": {
-		"@wordpress/scripts": "^18.0.1",
-		"autoprefixer": "^10.3.1",
-		"postcss": "^8.3.6",
-		"postcss-cli": "^8.3.1",
-		"postcss-custom-media": "^8.0.0",
-		"postcss-import": "^14.0.2",
-		"postcss-generate-asset-php": "^0.0.1",
-		"precss": "^4.0.0",
-		"stylelint": "^13.13.1",
-		"stylelint-config-wordpress": "^17.0.0"
+	  "@wordpress/scripts": "^27.0.0",
+	  "@wordpress/stylelint-config": "^21.32.0",
+	  "autoprefixer": "^10.4.16",
+	  "postcss": "^8.4.33",
+	  "postcss-advanced-variables": "^3.0.1",
+	  "postcss-cli": "^11.0.0",
+	  "postcss-custom-media": "^10.0.2",
+	  "postcss-import": "^16.0.0",
+	  "postcss-nested": "^6.0.1",
+	  "postcss-preset-env": "^9.3.0"
 	},
 	"scripts": {
-		"build-css": "npm run stylelint & npm run postcss:main",
-		"postcss:main": "postcss -o style.css css/style.css",
-		"stylelint": "stylelint css/*.css"
+	  "build": "npm run build:css",
+	  "build:css": "npm run stylelint && npm run postcss:main",
+	  "postcss:main": "postcss -o themes/happyprime/style.css themes/happyprime/css/style.css",
+	  "stylelint": "stylelint themes/happyprime/css/*.css"
 	},
 	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/happyprime/happyprime.co.git"
+	  "type": "git",
+	  "url": "git+https://github.com/happyprime/happyprime.co.git"
 	},
-	"author": "happyprime",
-	"license": "GPL-2.0-only",
+	"author": "",
+	"license": "ISC",
 	"bugs": {
-		"url": "https://github.com/happyprime/happyprime.co/issues"
+	  "url": "https://github.com/happyprime/happyprime.co/issues"
 	},
-	"homepage": "https://github.com/happyprime/happyprime.co"
-}
+	"homepage": "https://github.com/happyprime/happyprime.co#readme"
+  }
