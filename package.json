@@ -15,19 +15,10 @@
 	  "postcss-preset-env": "^9.3.0"
 	},
 	"scripts": {
-	  "build": "npm run build:css && npm run build:blocks",
+	  "build": "npm run build:css",
 	  "build:css": "npm run stylelint && npm run postcss:main",
-	  "build:js": "npm run build:theme:js",
-	  "build:blocks": "wp-scripts build --config mu-plugins/happyprime/blocks/webpack.config.js",
-	  "build:theme:js": "wp-scripts build --config themes/happyprime/webpack.config.js",
 	  "postcss:main": "postcss -o themes/happyprime/style.css themes/happyprime/css/style.css",
-	  "postcss:editor": "postcss -o themes/happyprime/editor-style.css themes/happyprime/css/editor-style.css",
-	  "stylelint": "stylelint themes/happyprime/css/**/*.css",
-	  "lint:js": "wp-scripts lint-js",
-	  "lint:blocks:js": "wp-scripts lint-js mu-plugins/happyprime/blocks/",
-	  "lint:theme:js": "wp-scripts lint-js --config themes/happyprime/webpack.config.js",
-	  "fix:js": "wp-scripts lint-js --fix",
-	  "fix:blocks:js": "wp-scripts lint-js mu-plugins/happyprime/blocks/ --fix"
+	  "stylelint": "stylelint themes/happyprime/css/*.css"
 	},
 	"repository": {
 	  "type": "git",
