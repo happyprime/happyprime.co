@@ -1,53 +1,51 @@
-name: CI
+name: Happy Prime Production Deployment
 
 on:
   push:
-    branches:
-      - master
+    branches: [ trunk ]
 
 jobs:
-  build:
-
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v1
-    - name: Install Node.js
-      uses: actions/setup-node@v1
-      with:
-        node-version: '10.x'
-    - name: Install npm dependencies
-      run: npm install
-    - name: Build CSS
-      run: npm run build-css
-    - name: Deploy to happyprime.co
+    - name: Checkout project
+      uses: actions/checkout@v4
+
+    - name: Deploy to server
       if: success()
-      uses: easingthemes/ssh-deploy@v2.0.7
+      uses: easingthemes/ssh-deploy@v4
       env:
-          SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
-          ARGS: "-rltgoDzvO --exclude=.git --exclude=.gitignore --exclude=.github --exclude=node_modules --delete"
+          SSH_PRIVATE_KEY: ${{ secrets.KINSTA_SSH_KEY }}
+          ARGS: "-rltgoDzvO --exclude-from=.deploy_ignore --delete"
           SOURCE: "./"
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
+          REMOTE_PORT: ${{ secrets.REMOTE_PORT }}
           TARGET: ${{ secrets.REMOTE_TARGET }}
-    - name: Send deployment notification to Happy Prime Slack
+
+    - name: Successful deployment Slack notification
       if: success()
-      uses: rtCamp/action-slack-notify@v2.0.0
-      env:
-        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-        SLACK_ICON: https://github.com/happyprime.png
-        SLACK_CHANNE: river-deploys
-        SLACK_USERNAME: Happy Prime
-        SLACK_TITLE: Happy Prime theme deployment
-        SLACK_MESSAGE: 'The theme for happyprime.co has been deployed :rocket:'
-    - name: Send error notification to Happy Prime Slack
+      uses: wearerequired/slack-messaging-action@v2
+      with:
+        bot_token: ${{ secrets.SLACK_BOT_TOKEN }}
+        channel: project-happyprimeweb
+        payload: >-
+          {
+            "icon_emoji": ":shipit:",
+            "username": "Happy Prime Deployment: ${{ github.event.sender.login }}",
+            "text": ":white_check_mark: Deployment from the <https://github.com/${{ github.repository }}|${{ github.repository }}> `trunk` branch to https://happyprime.co complete."
+          }
+
+    - name: Deployment failed Slack notification
       if: failure()
-      uses: rtCamp/action-slack-notify@v2.0.0
-      env:
-        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-        SLACK_ICON: https://github.com/happyprime.png
-        SLACK_COLOR: '#ff0000'
-        SLACK_CHANNE: river-deploys
-        SLACK_USERNAME: Happy Prime
-        SLACK_TITLE: Happy Prime theme deployment
-        SLACK_MESSAGE: 'Deployment was not successful. :red_circle:'
+      uses: wearerequired/slack-messaging-action@v2
+      with:
+        bot_token: ${{ secrets.SLACK_BOT_TOKEN }}
+        channel: project-happyprimeweb
+        payload: >-
+          {
+            "icon_emoji": ":shipit:",
+            "username": "Happy Prime Deployment: ${{ github.event.sender.login }}",
+            "text": ":large_red_square: Deployment from the <https://github.com/${{ github.repository }}|${{ github.repository }}> `trunk` branch to https://happyprime.co failed."
+          }
