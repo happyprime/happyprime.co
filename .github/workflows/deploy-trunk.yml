@@ -1,4 +1,5 @@
-name: Happy Prime Production Deployment
+# This file is managed in https://github.com/happyprime/projects
+name: Production deployment from trunk
 
 on:
   push:
@@ -16,7 +17,7 @@ jobs:
       if: success()
       uses: easingthemes/ssh-deploy@v4
       env:
-          SSH_PRIVATE_KEY: ${{ secrets.KINSTA_SSH_KEY }}
+          SSH_PRIVATE_KEY: ${{ secrets.REMOTE_SSH_PRIVATE_KEY }}
           ARGS: "-rltgoDzvO --include-from=.deploy_include --exclude-from=.deploy_ignore --delete"
           SOURCE: "./"
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
@@ -29,12 +30,14 @@ jobs:
       uses: wearerequired/slack-messaging-action@v2
       with:
         bot_token: ${{ secrets.SLACK_BOT_TOKEN }}
-        channel: project-happyprimeweb
+        channel: ${{ secrets.SLACK_CHANNEL }}
         payload: >-
           {
             "icon_emoji": ":shipit:",
+            "unfurl_links": false,
+            "unfurl_media": false,
             "username": "Happy Prime Deployment: ${{ github.event.sender.login }}",
-            "text": ":white_check_mark: Deployment from the <https://github.com/${{ github.repository }}|${{ github.repository }}> `trunk` branch to https://happyprime.co complete."
+            "text": ":white_check_mark: Deployment from the <https://github.com/${{ github.repository }}|${{ github.repository }}> `trunk` branch to ${{ secrets.PRODUCTION_URL }} complete."
           }
 
     - name: Deployment failed Slack notification
@@ -46,6 +49,8 @@ jobs:
         payload: >-
           {
             "icon_emoji": ":shipit:",
+            "unfurl_links": false,
+            "unfurl_media": false,
             "username": "Happy Prime Deployment: ${{ github.event.sender.login }}",
-            "text": ":large_red_square: Deployment from the <https://github.com/${{ github.repository }}|${{ github.repository }}> `trunk` branch to https://happyprime.co failed."
+            "text": ":large_red_square: Deployment from the <https://github.com/${{ github.repository }}|${{ github.repository }}> `trunk` branch to ${{ secrets.PRODUCTION_URL }} failed."
           }
