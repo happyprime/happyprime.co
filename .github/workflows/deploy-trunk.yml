@@ -17,7 +17,7 @@ jobs:
       uses: easingthemes/ssh-deploy@v4
       env:
           SSH_PRIVATE_KEY: ${{ secrets.KINSTA_SSH_KEY }}
-          ARGS: "-rltgoDzvO --exclude-from=.deploy_ignore --delete"
+          ARGS: "-rltgoDzvO --include-from=.deploy_include --exclude-from=.deploy_ignore --delete"
           SOURCE: "./"
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
