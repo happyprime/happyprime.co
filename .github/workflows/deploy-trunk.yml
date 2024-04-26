@@ -15,7 +15,7 @@ jobs:
 
     - name: Deploy to server
       if: success()
-      uses: easingthemes/ssh-deploy@v4
+      uses: easingthemes/ssh-deploy@v5
       env:
           SSH_PRIVATE_KEY: ${{ secrets.REMOTE_SSH_PRIVATE_KEY }}
           ARGS: "-rltgoDzvO --include-from=.deploy_include --exclude-from=.deploy_ignore --delete"
