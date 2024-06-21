@@ -7,7 +7,7 @@
 
 namespace HappyPrime\WP\Editor;
 
-add_action( 'plugins_loaded', __NAMESPACE__ . '\remove_default_actions' );
+add_action('plugins_loaded', __NAMESPACE__ . '\remove_default_actions' );
 
 /**
  * Remove the default duotone SVGs output by WordPress.
