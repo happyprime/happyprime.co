@@ -6,51 +6,14 @@ on:
     branches: [ trunk ]
 
 jobs:
-  deploy:
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Checkout project
-      uses: actions/checkout@v4
-
-    - name: Deploy to server
-      if: success()
-      uses: easingthemes/ssh-deploy@v5.0.3
-      env:
-          SSH_PRIVATE_KEY: ${{ secrets.REMOTE_SSH_PRIVATE_KEY }}
-          ARGS: "-rltgoDzvO --include-from=.deploy_include --exclude-from=.deploy_ignore --delete"
-          SOURCE: "./"
-          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
-          REMOTE_USER: ${{ secrets.REMOTE_USER }}
-          REMOTE_PORT: ${{ secrets.REMOTE_PORT }}
-          TARGET: ${{ secrets.REMOTE_TARGET }}
-
-    - name: Successful deployment Slack notification
-      if: success()
-      uses: wearerequired/slack-messaging-action@v3
-      with:
-        bot_token: ${{ secrets.SLACK_BOT_TOKEN }}
-        channel: ${{ secrets.SLACK_CHANNEL }}
-        payload: >-
-          {
-            "icon_emoji": ":shipit:",
-            "unfurl_links": false,
-            "unfurl_media": false,
-            "username": "Happy Prime Deployment: ${{ github.event.sender.login }}",
-            "text": ":white_check_mark: Deployment from the <https://github.com/${{ github.repository }}|${{ github.repository }}> `trunk` branch to ${{ secrets.PRODUCTION_URL }} complete."
-          }
-
-    - name: Deployment failed Slack notification
-      if: failure()
-      uses: wearerequired/slack-messaging-action@v3
-      with:
-        bot_token: ${{ secrets.SLACK_BOT_TOKEN }}
-        channel: project-happyprimeweb
-        payload: >-
-          {
-            "icon_emoji": ":shipit:",
-            "unfurl_links": false,
-            "unfurl_media": false,
-            "username": "Happy Prime Deployment: ${{ github.event.sender.login }}",
-            "text": ":large_red_square: Deployment from the <https://github.com/${{ github.repository }}|${{ github.repository }}> `trunk` branch to ${{ secrets.PRODUCTION_URL }} failed."
-          }
+  call-workflow:
+    uses: happyprime/workflows/.github/workflows/deploy.yml@trunk
+    secrets:
+      REMOTE_SSH_PRIVATE_KEY: ${{ secrets.REMOTE_SSH_PRIVATE_KEY }}
+      REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+      REMOTE_USER: ${{ secrets.REMOTE_USER }}
+      REMOTE_PORT: ${{ secrets.REMOTE_PORT }}
+      REMOTE_TARGET: ${{ secrets.REMOTE_TARGET }}
+      SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+      SLACK_CHANNEL: ${{ secrets.SLACK_CHANNEL }}
+      PRODUCTION_URL: ${{ secrets.PRODUCTION_URL }}
