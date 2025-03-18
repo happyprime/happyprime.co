@@ -5,6 +5,10 @@
  * @package happyprime
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 add_action( 'wp_enqueue_scripts', 'happyprime_enqueue_styles', 11 );
 
 /**

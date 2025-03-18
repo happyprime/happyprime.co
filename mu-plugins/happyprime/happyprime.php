@@ -7,6 +7,10 @@
 
 namespace HappyPrime;
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 define( 'HAPPYPRIME_MU_PLUGIN_DIR', __DIR__ );
 define( 'HAPPYPRIME_MU_PLUGIN_FILE', __FILE__ );
 

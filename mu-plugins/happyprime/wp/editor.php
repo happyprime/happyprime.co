@@ -7,6 +7,10 @@
 
 namespace HappyPrime\WP\Editor;
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 add_action( 'plugins_loaded', __NAMESPACE__ . '\remove_default_actions' );
 
 /**
