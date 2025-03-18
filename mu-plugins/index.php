@@ -6,6 +6,10 @@
  * @package happyprime
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 /**
  * Load all mu-plugins within subfolders where a PHP file exists with
  * the same name as the directory name.

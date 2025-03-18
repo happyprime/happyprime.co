@@ -7,6 +7,10 @@
 
 namespace HappyPrime\WP\Media;
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 add_filter( 'upload_size_limit', __NAMESPACE__ . '\increase_max_upload_size', 20 );
 
 /**
