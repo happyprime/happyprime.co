@@ -1,10 +1,11 @@
+.browserslistrc
 .deploy_ignore
 .deploy_include
 .editorconfig
 .gitignore
 .nvmrc
 .postcssrc.js
-.stylelintrc
+.stylelintrc.js
 advanced-cache.php
 object-cache.php
 composer.json
