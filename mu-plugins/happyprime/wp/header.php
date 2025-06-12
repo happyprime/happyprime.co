@@ -17,7 +17,7 @@ add_action( 'plugins_loaded', __NAMESPACE__ . '\remove_default_actions' );
  * Remove other default actions that output unnecessary elements or do
  * unnecessary things.
  */
-function remove_default_actions() {
+function remove_default_actions(): void {
 
 	// Remove EditURL link for XML-RPC hinting.
 	remove_action( 'wp_head', 'rsd_link' );

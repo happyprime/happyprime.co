@@ -17,7 +17,7 @@ add_filter( 'wp_resource_hints', __NAMESPACE__ . '\remove_wp_org_cdn_prefetch' )
 /**
  * Allow devices to display emoji rather than via JavaScript and image replacement.
  */
-function remove_extra_emoji_handling() {
+function remove_extra_emoji_handling(): void {
 
 	// Don't output the inline JavaScript used to convert emoji characters
 	// into Twemoji images.

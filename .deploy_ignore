@@ -1,5 +1,6 @@
 .deploy_ignore
 .deploy_include
+.editorconfig
 .gitignore
 .nvmrc
 .postcssrc.js
@@ -9,12 +10,11 @@ composer.lock
 package.json
 package-lock.json
 phpcs.xml.dist
+phpstan.neon.dist
 README.md
+/.cursor/
 /.git/
 /.github/
-/backstop_data/
-/mu-plugins/kinsta-mu-plugins.php
-/mu-plugins/kinsta-mu-plugins/
 /node_modules/
 /plugins/*/
 /themes/*/
