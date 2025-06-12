@@ -20,7 +20,6 @@ README.md
 /node_modules/
 /plugins/
 /plugins/*/
-/themes/
 /themes/*/
 /themes/*/node_modules/
 /upgrade/
