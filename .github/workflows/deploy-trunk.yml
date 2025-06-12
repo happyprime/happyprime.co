@@ -7,7 +7,7 @@ on:
 
 jobs:
   call-workflow:
-    uses: happyprime/workflows/.github/workflows/deploy.yml@trunk
+    uses: happyprime/workflows/.github/workflows/deploy.yml@debug/deploy
     secrets:
       REMOTE_SSH_PRIVATE_KEY: ${{ secrets.REMOTE_SSH_PRIVATE_KEY }}
       REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
