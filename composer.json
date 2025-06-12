@@ -3,12 +3,13 @@
 	"type": "project",
 	"minimum-stability": "stable",
 	"require-dev": {
-		"happyprime/coding-standards": "^0.0.1",
+		"happyprime/coding-standards": "*",
 		"phpcompatibility/php-compatibility": "dev-develop as 9.99.99"
 	},
 	"scripts": {
 		"phpcs": "vendor/bin/phpcs",
-		"phpcbf": "vendor/bin/phpcbf"
+		"phpcbf": "vendor/bin/phpcbf",
+		"phpstan": "vendor/bin/phpstan analyse --memory-limit=2048M"
 	},
 	"config": {
 		"allow-plugins": {
