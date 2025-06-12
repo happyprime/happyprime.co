@@ -18,7 +18,9 @@ README.md
 /.git/
 /.github/
 /node_modules/
+/plugins/
 /plugins/*/
+/themes/
 /themes/*/
 /themes/*/node_modules/
 /upgrade/
