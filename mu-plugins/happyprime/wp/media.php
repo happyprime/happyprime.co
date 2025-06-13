@@ -14,12 +14,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 add_filter( 'upload_size_limit', __NAMESPACE__ . '\increase_max_upload_size', 20 );
 
 /**
- * Set the maximum file upload (media) size limit to 100 mb.
+ * Set the maximum file upload (media) size limit.
  *
- * @param int $size The size limit.
  * @return int The modified limit.
  */
-function increase_max_upload_size( $size ): int {
-	// 100 MB (weird # because it is x 1024 bytes).
+function increase_max_upload_size(): int {
 	return 100 * MB_IN_BYTES;
 }
