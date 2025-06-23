@@ -13,11 +13,13 @@
 	<exclude-pattern>db.php</exclude-pattern>
 	<exclude-pattern>*.svg.php</exclude-pattern>
 
-	<!-- Exclude all plugins, except for those prefixed as happyprime. -->
-	<exclude-pattern type="relative">^plugins/(?!happyprime-*)</exclude-pattern>
+	<!-- Exclude all plugins, except for those prefixed with project name. -->
+	<exclude-pattern type="relative">^plugins/(?!happyprime.co-*)</exclude-pattern>
 
-	<!-- Exclude all themes, except for happyprime. -->
-	<exclude-pattern>themes/(?!happyprime)</exclude-pattern>
+	<exclude-pattern type="relative">^mu-plugins/(?!happyprime.co)</exclude-pattern>
+
+	<!-- Exclude all themes, except for project theme. -->
+	<exclude-pattern>themes/(?!happyprime.co)</exclude-pattern>
 
 	<!-- Exclude other directories created by WordPress. -->
 	<exclude-pattern>upgrade/</exclude-pattern>

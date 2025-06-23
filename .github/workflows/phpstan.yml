@@ -1,7 +1,7 @@
-# Run PHP Code Sniffer (PHPCS) and comment on the pull request with any issues.
+# Run PHPStan and comment on the pull request with any issues.
 #
 # This file is managed in https://github.com/happyprime/projects
-name: PHPCS (Default, PHP 8.3)
+name: PHPStan (Default, PHP 8.3)
 
 on: pull_request
 
@@ -16,6 +16,6 @@ permissions:
 
 jobs:
   call-workflow:
-    uses: happyprime/workflows/.github/workflows/phpcs.yml@trunk
+    uses: happyprime/workflows/.github/workflows/phpstan.yml@trunk
     with:
       php-version: '8.3'

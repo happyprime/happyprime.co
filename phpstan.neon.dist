@@ -1,8 +1,8 @@
 parameters:
   level: 5
   paths:
-    - %rootDir%/../../../mu-plugins/happyprime
-    - %rootDir%/../../../themes/happyprime
+    - %rootDir%/../../../mu-plugins/happyprime.co
+    - %rootDir%/../../../themes/happyprime.co
   scanFiles:
     - %rootDir%/../../php-stubs/wordpress-stubs/wordpress-stubs.php
     - %rootDir%/../../php-stubs/wordpress-tests-stubs/wordpress-tests-stubs.php
