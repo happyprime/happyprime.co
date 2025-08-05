@@ -1,0 +1,12 @@
+# This project does require mu-plugins.
++ /mu-plugins/
++ /mu-plugins/***
+
+# This project does provide a theme.
++ /themes/
++ /themes/happyprime/***
+
+# This project does not require any other files.
+- /themes/*
+- /plugins/*
+- /*
